@@ -1,0 +1,215 @@
+
+LAYOUT BÁSICO E COLUNAS
+
+body {
+  font-family: sans-serif;
+  background-color: #eee;
+}
+
+.kanban-board {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.columns-container {
+  display: flex;
+  gap: 20px;
+}
+
+.kanban-column {
+  flex: 1;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.kanban-column h2 {
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+}
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+ FORMULÁRIO
+.task-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.task-form input,
+.task-form textarea {
+  padding: 8px;
+  margin: 10px auto; /* centraliza horizontalmente */
+  border: 1px solid #ccc;
+  display: block;
+  width: 90%; /* caixas de escrita com largura agradável e centralizadas */
+  box-sizing: border-box;
+}
+
+.task-form button {
+  background-color: #3498db;
+  color: white;
+  cursor: pointer;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 4px;
+  display: block;
+  margin: 10px auto; /* centraliza o botão do formulário */
+}
+
+.task-form button:disabled {
+  background-color: #ddd;
+  cursor: not-allowed;
+}
+
+card/ ações
+.task-card {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 4px;
+  border-left: 5px solid;
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* garante conteúdo comece no topo */
+  min-height: 120px; /* reduz espaço vertical dos cartões */
+}
+
+/* Garante que o conteúdo (título + descrição) cresça e empurre as ações para baixo */
+.task-card .card-content {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Limita título e descrição para evitar expansão excessiva do cartão */
+.task-card h3 {
+  margin: 0 0 8px 0;
+  font-size: 1.05em;
+  line-height: 1.2;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* limita o título a 2 linhas */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.task-card p {
+  margin: 0 0 8px 0;
+  color: #333;
+  font-size: 0.95em;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* limita a descrição a 3 linhas */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Quando o cartão está expandido, mostramos o conteúdo completo */
+.task-card.expanded p {
+  display: block;
+  -webkit-line-clamp: unset;
+  overflow: visible;
+}
+
+.read-more-wrap {
+  margin-top: 6px;
+}
+
+.btn-link {
+  background: transparent;
+  border: none;
+  color: #3498db;
+  cursor: pointer;
+  padding: 0;
+  font-size: 0.9em;
+}
+
+/* Cores dos Status */
+.status-a_fazer {
+  border-left-color: #e74c3c; /* Vermelho */
+}
+
+.status-em_progresso {
+  border-left-color: #f1c40f; /* Amarelo */
+}
+
+.status-concluidas {
+  border-left-color: #2ecc71; /* Verde */
+}
+
+
+/* Ações (Mover / Excluir) */
+.task-actions {
+  display: flex;
+  justify-content: space-between; /* botão esquerdo à esquerda e direito à direita */
+  align-items: center;
+  gap: 12px; /* espaço entre áreas */
+  margin-top: auto; /* empurra as ações para o fim do cartão */
+  padding-top: 6px;
+  border-top: 1px solid #eee;
+}
+
+.task-actions button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9em;
+  color: white;
+}
+
+.task-actions span {
+  display: none; /* espaçador não utilizado nesta versão */
+}
+
+.actions-left, .actions-right {
+  display: flex;
+  gap: 10px;
+}
+
+.actions-left {
+  justify-content: flex-start;
+}
+
+.actions-right {
+  justify-content: flex-end;
+}
+
+/* Se por algum motivo houver dois blocos de ações renderizados, escondemos o segundo
+   para evitar botões duplicados na interface (proteção visual rápida). */
+.task-card .task-actions + .task-actions {
+  display: none;
+}
+
+/* Garantia mais forte: se por alguma razão houver múltiplos blocos .task-actions
+   dentro do mesmo .task-card, escondemos todos exceto o primeiro. Isso evita
+   que o usuário veja grupos duplicados de botões. */
+.task-card .task-actions:not(:first-of-type) {
+  display: none !important;
+}
+
+.task-actions button:not(.delete-button) {
+  background-color: #3498db; /* Azul */
+}
+
+.task-actions button.delete-button {
+  background-color: #e74c3c; /* Vermelho */
+  margin-right: 5px;
+}
