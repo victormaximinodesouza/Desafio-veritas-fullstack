@@ -82,4 +82,4 @@ O que pode melhorar (Limitações e Bônus)
 Limitação Atual: Se o servidor Go for desligado, as tarefas salvas são perdidas, pois elas estão sendo guardadas apenas na memória.
 
 
-Melhorias Futuras: Como passos opcionais (Bônus), pretendo implementar o recurso de arrastar e soltar as tarefas e salvar os dados em um arquivo JSON para que eles não se percam.
+Melhorias Futuras: Como passos opcionais (Bônus), pretendo implementar o recurso de arrastar e soltar as tarefas e salvar os dados em um arquivo JSON para que eles não se percam. Adicionar botões mais interativos
