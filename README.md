@@ -1,32 +1,34 @@
-# Desafio Veritas - Fullstack
+# 🎯 Desafio Fullstack Veritas: Gerenciador de Tarefas
 
-Instruções rápidas para rodar o projeto localmente (Windows PowerShell)
+<p align="center">
+  <img src="https://img.shields.io/badge/Go-1.20%2B-00ADD8?style=for-the-badge&logo=go" alt="Go 1.20+ Badge">
+  <img src="https://img.shields.io/badge/React-Vite-61DAFB?style=for-the-badge&logo=react" alt="React + Vite Badge">
+  <img src="https://img.shields.io/badge/Fullstack-API%20%26%20UI-30363D?style=for-the-badge&logo=github" alt="Fullstack Badge">
+</p>
 
-Pré-requisitos
-- Go (>= 1.20) instalado e no PATH
-- Node.js + npm
+Este projeto é uma demonstração de uma aplicação fullstack, onde implementei um **Gerenciador de Tarefas (To-Do List)**.
 
-Rodando manualmente (duas janelas de terminal)
+## 💡 Arquitetura e Estrutura
 
-1) Backend (API Go)
+O desafio foi resolvido com uma arquitetura de serviços separados, evidenciando habilidades em comunicação entre frontend e backend (via **CORS**).
+
+| Componente | Localização | Tecnologias Chave | Funcionalidade Principal |
+| :--- | :--- | :--- | :--- |
+| **Backend (API)** | `backend/` | **Go (>= 1.20)**, REST | Servir a API (`/tasks`) e gerenciar a lógica de dados. |
+| **Frontend (UI)** | `frontend/` | **React**, **Vite**, **npm** | Renderização da UI e consumo da API backend. |
+
+## 🚀 Como Executar o Projeto (Desenvolvimento Local)
+
+### Pré-requisitos
+
+Certifique-se de que as seguintes dependências estão instaladas:
+
+* ✅ **Go** (versão **>= 1.20**)
+* ✅ **Node.js** e **npm**
+
+### 1. ⚙️ Início Rápido (Recomendado para Windows)
+
+Use o script na raiz para iniciar ambos os serviços automaticamente em janelas separadas:
+
 ```powershell
-cd "c:\Users\maxim\OneDrive\Área de Trabalho\desafio_veritas_fullstack\backend"
-go run .
-```
-O backend roda em `http://localhost:8080` (API em `/tasks`).
-
-2) Frontend (Vite + React)
-```powershell
-cd "c:\Users\maxim\OneDrive\Área de Trabalho\desafio_veritas_fullstack\frontend"
-npm install   # se ainda não instalou
-npm run dev    # por padrão irá usar a porta 5173
-```
-Abra o frontend em `http://localhost:5173/`.
-
-Script automático (Windows)
-- Há um arquivo `start-dev.bat` na raiz que abre duas janelas de terminal e inicia backend + frontend.
-
-Notas
-- A API usa CORS permitindo o acesso do frontend durante o desenvolvimento.
-- Se ver uma mensagem de "ERRO DE REDE" na UI, abra DevTools (F12) → Console e Network e verifique a requisição para `/tasks`.
-- Se precisar forçar outra porta no frontend, edite `frontend/package.json` no script `dev`.
+.\start-dev.bat
