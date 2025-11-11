@@ -1,31 +1,36 @@
 # ⚡ DESAFIO FULLSTACK CONCLUÍDO! 🚀
 
+# 🌟 MEU PROJETO FULLSTACK: Lista de Tarefas (To-Do List) 🚀
+
 <p align="center">
-  <img src="https://img.shields.io/badge/Go_Lang-Backend_Potente-00ADD8?style=for-the-badge&logo=go" alt="Go Backend Badge">
-  <img src="https://img.shields.io/badge/React_%2B_Vite-UI_Turbinada-61DAFB?style=for-the-badge&logo=react" alt="React + Vite Frontend Badge">
-  <img src="https://img.shields.io/badge/Fullstack-Completo-30363D?style=for-the-badge&logo=github" alt="Fullstack Completo Badge">
+  <img src="https://img.shields.io/badge/Lógica-Go-00ADD8?style=for-the-badge&logo=go" alt="Go Lógica Badge">
+  <img src="https://img.shields.io/badge/Interface-React-61DAFB?style=for-the-badge&logo=react" alt="React Interface Badge">
 </p>
 
-Chegou a hora de dar uma olhada neste **Gerenciador de Tarefas (To-Do List)** que construí do zero! Não é só mais uma lista: é um sistema fullstack robusto e otimizado.
+Olá! Este projeto é uma **Lista de Tarefas** completa, criada para mostrar minhas habilidades em conectar duas tecnologias poderosas.
 
-Minha missão aqui foi entregar **performance** no backend e uma **UX incrível** no frontend.
+**O que você vai encontrar aqui?**
+* Um sistema onde você pode **adicionar, ver, editar e apagar** tarefas facilmente.
+* Uma separação clara entre a **lógica** do projeto (o que ele faz) e a **interface** (o que você vê).
 
-## 🧠 Arquitetura: Go Power!
+---
 
-Decidi usar o Go para o backend por um motivo simples: **Velocidade e Eficiência!**
+## 🛠️ O Que Usamos (As Ferramentas)
 
-| Componente | Missão | Superpoderes (Tecnologias) |
+| Onde Fica | O que usamos | Por que é bom? |
 | :--- | :--- | :--- |
-| **Backend (API)** | A força motriz! Cuida da lógica das tarefas. | **Go (>= 1.20)**, API REST, Performance de ponta. |
-| **Frontend (UI)** | Onde a mágica visual acontece! | **React**, **Vite** (para um build ultra-rápido!), UI moderna. |
+| **A Lógica (Backend)** | **Go** (versão 1.20+) | É super rápido e muito seguro para cuidar de todas as informações. |
+| **A Interface (Frontend)** | **React** + **Vite** | Para fazer uma tela moderna, que muda na hora e é leve de carregar. |
 
-## 🕹️ Bora Rodar Esse Monstro! (É Incrivelmente Fácil)
+---
 
-Para ver a aplicação funcionando na sua máquina, você só precisa ter o **Go** e o **Node/npm** instalados.
+## 🏃 Como Rodar na Sua Máquina (É Muito Fácil!)
 
-### 1. 🥇 O Jeito Ninja (Recomendado para Windows)
+Você só precisa ter o **Go** e o **Node/npm** instalados.
 
-Esqueça abrir terminais e digitar comandos longos! Use nosso script de *auto-start*:
+### 1. 🥇 O Jeito Mais Simples (Recomendado para Windows)
+
+Vá até a pasta principal do projeto e use o comando:
 
 ```powershell
 .\start-dev.bat
